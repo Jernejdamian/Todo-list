@@ -17,16 +17,42 @@
         render();
     }
 
+    const toggleDoneButton=(index)=>{
+        tasks[index].done = !tasks[index].done; 
+                render();
+    }
+
+    const deletedTask=(index)=>{
+        tasks.splice(index, 1);
+                render();
+    }
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString +=
                 `<li ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+             <button class="js-done">Zrobione?</button>
             ${task.content}
+            <button class="js-remove">Usuń</button>
             </li>`
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
+        const doneButtons = document.querySelectorAll(".js-done");
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleDoneButton(index);
+            }) 
+        })
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                deletedTask();
+            }) 
+        }) 
     }
 
     const init = () => {
