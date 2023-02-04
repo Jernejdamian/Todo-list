@@ -7,14 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-list</title>
     <script defer src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
 </head>
 
 <body>
-    <form class="js-form">
-        <input class="js-newTask">
-        <button>Dodaj zadanie</button>
-    </form>
-    <ul class="js-tasks"></ul>
+    <main class="container">
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__header">Dodaj nowe zadanie</h2>
+            <form class="form js-form">
+                <div class="form__div">
+                    <input class="js-newTask">
+                    <button>Dodaj zadanie</button>
+                </div>
+            </form>
+        </section>
+        <section class="section">
+            <h2 class="section__header">Lista zadań</h2>
+            <ul class="js-tasks"></ul>
+        </section>
+    </main>
 </body>
 
 </html>
