@@ -1,3 +1,6 @@
+.task{
+    padding: 0px;
+}
 .tasks__button{
     width: 30px;
     height: 30px;
@@ -16,11 +19,26 @@
     
 }
 .task__button-delete{
-    background-color: red;
+    background-color: hsl(0, 100%, 40%);
+}
+.task__button-delete:hover{
+    background-color: hsl(0, 100%, 50%);
+}
+.task__button-delete:active{
+    background-color: hsl(0, 100%, 60%);
 }
 .tasks__button--done{
     background-color: green;
 }
+.tasks__button--done:hover{
+    background-color: hsl(120, 100%, 30%);
+    }
+ .tasks__button--done:active{
+        background-color: hsl(120, 100%, 35%);
+        }
 .tasks__content--done{
     text-decoration: line-through;
+}
+.tasks__content{
+    text-transform: capitalize;
 }
