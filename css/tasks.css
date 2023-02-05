@@ -1,0 +1,26 @@
+.tasks__button{
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: none;
+}
+.tasks__item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: 20px;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 2px solid #eee;
+    
+}
+.task__button-delete{
+    background-color: red;
+}
+.tasks__button--done{
+    background-color: green;
+}
+.tasks__content--done{
+    text-decoration: line-through;
+}
